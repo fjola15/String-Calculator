@@ -28,4 +28,13 @@ public class CalculatorTest {
     public void testMultipleNumbers(){
     	assertEquals(8, Calculator.add("3,2,3"));
     }
+    @Test
+    public void testNewlineDelimiter(){
+    	assertEquals(5, Calculator.add("3\n2"));
+    }
+    @Test
+    public void testBothDelimiters(){
+    	assertEquals(8, Calculator.add("3\n2,3"));
+    }
+    
 }
